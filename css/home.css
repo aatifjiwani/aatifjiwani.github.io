@@ -12,7 +12,6 @@
   margin: auto; 
   display: block;
   border-radius: 100%;
-  
 
 }
 
@@ -34,6 +33,12 @@
   text-align: center;
   font-size: 15px;
 }
+
+.primary-link, .primary-link:hover, .primary-link:visited {
+  color: #B41C2A;
+}
+
+
 
 /**
  * Reset some basic elements
