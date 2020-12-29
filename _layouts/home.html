@@ -9,18 +9,7 @@
 </head>
 
 <body>
-    <header class="site-header" role="banner">
-        <div class="wrapper">
-            <a class="site-title" rel="author" href="/">Aatif Jiwani</a>
-            <nav class="site-nav">
-                <div class="trigger">
-                    <a class="page-link" href="/projects/">Projects</a>
-                    <a class="page-link" href="/research/">Research</a>
-                    <a class="page-link" href="/contact/">Contact</a>
-                </div>
-            </nav>
-        </div>  
-    </header>
+    {% include header.html name="active" %}
 
 
     <div class="introduction">
@@ -57,6 +46,10 @@
         <a class="primary-link" href="#" target="_blank">Resume</a>
     </div>
 
+
+    
 </body>
+
+{% include footer.html %}
 
 </html>
