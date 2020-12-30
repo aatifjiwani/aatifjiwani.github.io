@@ -7,6 +7,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 # Build settings
 theme: minima
 
+# Collections
+collections:
+   projects:
+    sort_by: ordering
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

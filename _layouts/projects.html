@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
     <title> Aatif Jiwani </title>
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/projects.css">
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
 </head>
 
@@ -13,7 +14,30 @@
     {% include header.html projects="active" %}
 
 
-    Coming Soon
+    <div class="wrapper" style="margin: auto; width: 55%; max-width: 55% !important;">
+        {% assign projects = site.projects | sort: "ordering" %}
+        {% for project in projects %}
+
+            <div class="project">
+                <div class="project-img" style="width: 300px;">
+                    <img src="{{ project.img }}" style="width: {{ project.img_size }};">
+                </div>
+                <div class="project-info">
+                    <h2>{{ project.name }}</h2>
+                    {{ project.content | markdownify }}
+                    <p>
+                        {% for link in project.links %}
+                            <a class="primary-link" href="{{ link.value }}" target="_blank">{{ link.name }}</a> 
+                            {% unless link.last %}
+                            /
+                            {% endunless %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+
+        {% endfor %}        
+    </div>
 
 </body>
 {% include footer.html %}
