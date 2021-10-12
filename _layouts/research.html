@@ -6,6 +6,7 @@
     <title> Aatif Jiwani </title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/research.css">
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
 </head>
 
@@ -14,8 +15,29 @@
     
     
     <div class="center-info">
-        <h1>In Progress</h1>
-        <p>I hope to have my research work ready to be publicized by mid-late Spring 2021. Please check back then :D</a></p>
+        {% assign papers = site.research | sort: "ordering" %}
+        {% for paper in papers %}
+
+            <div class="project">
+                <div class="project-img" style="width: 300px;">
+                    <img src="{{ paper.img }}" style="width: {{ paper.img_size }};">
+                </div>
+                <div class="project-info">
+                    <h2>{{ paper.title }}</h2>
+                    <p>
+                        <strong>Aatif Jiwani</strong>, {{ paper.authors }}
+                        <br>
+                        {{ paper.cite }}
+                        <br>
+                        [<a class="primary-link" href="{{ paper.paper_link }}" target="_blank">PDF</a>] /
+                        [<a class="primary-link" href="{{ paper.code_link }}" target="_blank">Code</a>]
+                    </p>
+                    {{ paper.content }}
+
+                </div>
+            </div>
+
+        {% endfor %} 
     </div>
 
 </body>

@@ -8,7 +8,7 @@ links:
  - name: Website
    value: https://sites.google.com/berkeley.edu/robobthebuilder/
    last: true
-ordering: 0
+ordering: 2
 ---
 Built a robotic simulation upon the idea that a user can specify a unique structure composed of blocks and a robot will process
 the structure and attempt to recreate it autonomously. We used the PAL Robotics TiAGo robot model to perform 2 primary tasks: 
